@@ -27,5 +27,4 @@ def getting_teams_data(url, page_number):
     total_teams_df.reset_index(inplace=True)
     total_teams_df.drop('index', axis=1, inplace=True)
     total_teams_df["Player_name"].str.lower()
-    print("Aviram")
     total_teams_df.to_csv(f"csvs/collection_of_teams{page_number}.csv")
