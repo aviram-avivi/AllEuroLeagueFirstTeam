@@ -17,7 +17,7 @@ if __name__ == '__main__':
     WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.CSS_SELECTOR, '#onetrust-accept-btn-handler'))).click()
     #^^accepting cookikes^^
 
-    for page_number in [x for x in range(11,12) if x != 2]: # from stackoverflow
+    for page_number in [x for x in range(1,12) if x != 2]: # from stackoverflow
         select = Select(driver.find_element_by_class_name("seasons-selector"))
         select.select_by_index(page_number)
         getting_teams_data(driver.current_url,page_number)
